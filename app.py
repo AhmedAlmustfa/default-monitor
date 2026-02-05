@@ -6,7 +6,7 @@ import datetime
 
 # --- CONFIGURATION ---
 # Replace this with your actual Neon connection string!
-DB_URL = "postgresql://neondb_owner:npg_B4cSC0gWZMhn@ep-dark-field-agchgfsk-pooler.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+DB_URL = st.secrets["DB_URL"]
 engine = create_engine(DB_URL)
 
 # Load the model you downloaded from Colab
@@ -104,4 +104,5 @@ elif page == "Business Dashboard":
             st.warning("No data found. Please run some predictions in the first tab!")
             
     except Exception as e:
+
         st.error(f"Error loading dashboard: {e}")
