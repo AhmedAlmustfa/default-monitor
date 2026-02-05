@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://AhmedAmustfa:$HF_TOKEN@huggingface.co/spaces/AhmedAmustfa/AhmedAlmustfa/default-monitor main
+        run: git push --force https://AhmedAlmustafa:$HF_TOKEN@huggingface.co/spaces/AhmedAmustfa/AhmedAlmustafa/default-monitor main
